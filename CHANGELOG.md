@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.1.1] - 2018-12-10
+
+### Changed
+
+- HTTP client is changed to `Gun` with `MachineGun` wrapper.
+
 ## [1.1.0] - 2018-11-26
 
 ### Changed

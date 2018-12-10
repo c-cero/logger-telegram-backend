@@ -1,6 +1,6 @@
 # LoggerTelegramBackend
 
-A logger backend for [Telegram](https://telegram.org/).
+A logger backend for [Telegram](https://telegram.org/) with [Gun](https://github.com/ninenines/gun) as HTTP client. Based on LoggerTelegramBackend by [Adrian Kumpf](https://github.com/adriankumpf/).
 
 ## Installation
 
@@ -8,7 +8,7 @@ Add `:logger_telegram_backend` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:logger_telegram_backend, "~> 1.1"}]
+  [{:logger_telegram_backend, github: "c-cero/logger-telegram-backend"}]
 end
 ```
 

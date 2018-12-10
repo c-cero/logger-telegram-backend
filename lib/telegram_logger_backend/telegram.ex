@@ -1,7 +1,7 @@
 defmodule LoggerTelegramBackend.Telegram do
   @moduledoc false
 
-  alias HTTPoison.{Response, Error}
+  alias MachineGun.{Response, Error}
 
   def send_message(text, opts) when is_binary(text) and is_list(opts) do
     post("https://api.telegram.org/bot#{Keyword.fetch!(opts, :token)}/sendMessage",
@@ -12,7 +12,7 @@ defmodule LoggerTelegramBackend.Telegram do
   end
 
   defp post(url, data) do
-    case HTTPoison.post(url, {:form, data}) do
+    case MachineGun.post(url, {:form, data}) do
       {:ok, %Response{status_code: 200}} -> :ok
       {:ok, %Response{body: body, status_code: code}} -> {:error, {:bad_status_code, code, body}}
       {:error, %Error{reason: reason}} -> {:error, reason}
